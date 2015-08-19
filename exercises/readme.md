@@ -1,3 +1,5 @@
+#### Warm Up Exercises
+
 To run each sketch, go to index.html and change 
 "sketch.js" on line 11 to the one you want to run.
 
@@ -8,6 +10,7 @@ Example:
 change to
   
   `<script src="00_mouseX-mouseY.js" type="text/javascript"></script>`
+
 
 In your Terminal, go to the folder where the files are and run
 
