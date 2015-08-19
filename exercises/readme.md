@@ -3,8 +3,8 @@ To run each sketch, go to index.html and change
 
 Example:
   
-  [<script src="sketch.js" type="text/javascript"></script>]
+  `<script src="sketch.js" type="text/javascript"></script>`
 
 change to
   
-  [<script src="00_mouseX-mouseY.js" type="text/javascript"></script>]
+  `<script src="00_mouseX-mouseY.js" type="text/javascript"></script>`
