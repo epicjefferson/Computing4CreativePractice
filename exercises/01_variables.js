@@ -10,13 +10,18 @@ function setup(){
   createCanvas(400,400);
   noCursor();
   stroke(245);
+
+  // After setting the canvas size, we can use that info to
+  // set the initial values of our variables
+  tailX = width/2;
+  tailY = height/2;
 }
 
 function draw(){
   background(245, 123, 158);
 
-  line(mouseX,mouseY,tailX,tailY);
+  line(mouseX, mouseY, tailX, tailY);
   
-  tailX = mouseX;
-  tailY = mouseY;
+  // What can we do to set the values 
+  // of the variables to our current cursor location?
 }

@@ -21,7 +21,7 @@ function draw() {
   }
   points.push(point); // Update the last spot in the array with the mouse location.
 
-  if (points.length > 50) {
+  if (points.length > 100) {
     points.splice(0,1);
   }
   

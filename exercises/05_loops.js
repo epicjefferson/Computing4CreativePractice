@@ -20,14 +20,15 @@ function draw() {
   for (var i = 0; i < 8; i++){    // Notice the 8 loops
     
     // 8 loops = 8 ellipses
-    ellipse(50+i*100,200,100,100);    
+    rect(i*100, 200, 100, 100);    
   
-    // We're just changing the center X value for the ellipses,
-    // try changing the center Y value instead.
+    // We're just changing the X value for the rectangles,
+    // try changing the Y value instead.
   }
 
   // Challenge:
-  // Create a large grid of ellipses, 
-  // you can only call ellipse() once!!
+  // Create a large grid of squares, 
+  // each colored randomly.
+  // you can only call rect() once!!
   // Hint: use 2 for() loops.
 }
