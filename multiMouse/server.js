@@ -59,6 +59,8 @@ function handleRequest(req, res) {
 // WebSockets work with the HTTP server
 var io = require('socket.io').listen(server);
 
+var id = 0;
+
 // Register a callback function to run when we have an individual connection
 // This is run for each individual user that connects
 io.sockets.on('connection',
@@ -66,12 +68,21 @@ io.sockets.on('connection',
   function (socket) {
   
     console.log("We have a new client: " + socket.id);
+
+    // handshake and assign ID
+    socket.on('my event',
+      function(data){
+        id += 1;
+        console.log("Assigned new ID to " + socket.id + "ID: " + id);
+        socket.emit('user id', {data: id});
+        socket.broadcast.emit('add', {data: id});
+      })
   
     // When this user emits, client side: socket.emit('otherevent',some data);
     socket.on('mouse',
       function(data) {
         // Data comes in as whatever was sent, including objects
-        console.log("Received: 'mouse' " + data.x + " " + data.y);
+        console.log("Received: 'mouse' "+ data.id + " " + data.x + " " + data.y);
       
         // Send it to all other clients
         socket.broadcast.emit('mouse', data);
@@ -83,6 +94,7 @@ io.sockets.on('connection',
     );
     
     socket.on('disconnect', function() {
+      id -= 1;
       console.log("Client has disconnected");
     });
   }
