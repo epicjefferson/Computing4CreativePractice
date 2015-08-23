@@ -1,7 +1,7 @@
-# uArm_Client (Modified for Lissajous Curve Function)
+# Modified uArm_Client + Lissajous Curve Generator
 Processing Project
 
-To implement the Lussajous Curve Movement
+To implement the Lissajous Curve Movement
 press 'l'
 
 In test environment, surface height was approximately -40,
@@ -16,4 +16,4 @@ Processing version: 2 [osx](http://download.processing.org/processing-2.2.1-maco
 
 Testing environment: Mac OS X 10.10
 
-Original Client Code [Here](https://github.com/UFactory-Team/uArm_Client)
+Original uArm Client Code [Here](https://github.com/UFactory-Team/uArm_Client)
